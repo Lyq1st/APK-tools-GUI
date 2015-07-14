@@ -1,0 +1,12 @@
+/Bin/lyqkey/
+/Bin/*.txt
+/Bin/*.keystore
+/Debug/
+/Release/
+/ipch/
+/Temp
+*.sdf
+*.user
+*.suo
+*.opensdf
+*.aps

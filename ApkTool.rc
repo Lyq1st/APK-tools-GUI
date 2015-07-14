@@ -1,0 +1,244 @@
+// Microsoft Visual C++ generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#ifndef APSTUDIO_INVOKED
+#include "targetver.h"
+#endif
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// Chinese (Simplified, PRC) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_CHS)
+LANGUAGE LANG_CHINESE, SUBLANG_CHINESE_SIMPLIFIED
+#pragma code_page(936)
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE 
+BEGIN
+    "#ifndef APSTUDIO_INVOKED\r\n"
+    "#include ""targetver.h""\r\n"
+    "#endif\r\n"
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE 
+BEGIN
+    "#define _AFX_NO_SPLITTER_RESOURCES\r\n"
+    "#define _AFX_NO_OLE_RESOURCES\r\n"
+    "#define _AFX_NO_TRACKER_RESOURCES\r\n"
+    "#define _AFX_NO_PROPERTY_RESOURCES\r\n"
+    "\r\n"
+    "#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_CHS)\r\n"
+    "LANGUAGE 4, 2\r\n"
+    "#pragma code_page(936)\r\n"
+    "#include ""res\\ApkTool.rc2""  // ·? Microsoft Visual C++ ±à?-μ?×ê?′\r\n"
+    "#include ""l.CHS\\afxres.rc""      // ±ê×?×é?t\r\n"
+    "#endif\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+#endif    // Chinese (Simplified, PRC) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+/////////////////////////////////////////////////////////////////////////////
+// English resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+LANGUAGE LANG_ENGLISH, SUBLANG_NEUTRAL
+#pragma code_page(1252)
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDR_MAINFRAME           ICON                    "res\\ApkTool.ico"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_ABOUTBOX DIALOGEX 0, 0, 171, 122
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "About ApkTool GUI"
+FONT 9, "MS Shell Dlg", 0, 0, 0x1
+BEGIN
+    ICON            IDR_MAINFRAME,IDC_STATIC,14,14,20,20
+    DEFPUSHBUTTON   "??",IDOK,114,101,50,14,WS_GROUP
+    LTEXT           "apktool   1.5.0\naapt       r04\nbaksmali  1.4.0\nsmali       1.4.0\ndex2jar   0.0.7.9                     ",IDC_STATIC,26,47,87,66
+    LTEXT           "iamlyq4pub@gmail.com",IDC_STATIC,42,26,114,8
+    LTEXT           "ApkTools GUI",IDC_STATIC,42,14,114,8,SS_NOPREFIX
+END
+
+IDD_APKTOOL_DIALOG DIALOGEX 0, 0, 271, 293
+STYLE DS_SETFONT | DS_FIXEDSYS | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU | WS_THICKFRAME
+EXSTYLE WS_EX_APPWINDOW
+CAPTION "ApkTools GUI"
+FONT 9, "MS Shell Dlg", 0, 0, 0x1
+BEGIN
+    PUSHBUTTON      "Decompile APK",IDC_BTN_DECODE,206,7,50,14
+    PUSHBUTTON      "Rebuild APK",IDC_BTN_BUILD,206,26,50,14
+    EDITTEXT        IDC_EDIT_DECODE,7,7,197,14,ES_AUTOHSCROLL,WS_EX_ACCEPTFILES
+    EDITTEXT        IDC_EDIT_BUILD,7,26,197,14,ES_AUTOHSCROLL,WS_EX_ACCEPTFILES
+    PUSHBUTTON      "Log >>",IDC_BTN_SHOW_LOG,207,175,50,14
+    LISTBOX         IDC_LIST_LOG,7,195,257,91,LBS_NOINTEGRALHEIGHT | WS_VSCROLL | WS_HSCROLL | WS_TABSTOP
+    PUSHBUTTON      "Clear Log",IDC_BTN_CLEAR_LOG,153,175,50,14
+    PUSHBUTTON      "Decompile DEX",IDC_BTN_BAKSMALI,206,64,50,14
+    EDITTEXT        IDC_EDIT_BAKSMALI,7,64,197,14,ES_AUTOHSCROLL,WS_EX_ACCEPTFILES
+    PUSHBUTTON      "Rebuild DEX",IDC_BTN_SMALI,206,83,50,14
+    EDITTEXT        IDC_EDIT_SMALI,7,83,197,14,ES_AUTOHSCROLL,WS_EX_ACCEPTFILES
+    PUSHBUTTON      "DEX to JAR",IDC_BTN_DEX2JAR,206,102,50,14
+    EDITTEXT        IDC_EDIT_DEX2JAR,7,102,197,14,ES_AUTOHSCROLL,WS_EX_ACCEPTFILES
+    PUSHBUTTON      "Sign APK",IDC_BTN_SIGN,206,45,50,14
+    EDITTEXT        IDC_EDIT_SIGN,7,45,197,14,ES_AUTOHSCROLL,WS_EX_ACCEPTFILES
+    PUSHBUTTON      "Export Log",IDC_BTN_EXPORT_LOG,99,175,50,14
+    EDITTEXT        IDC_EDIT_JAR2JAVA,7,119,197,14,ES_AUTOHSCROLL,WS_EX_ACCEPTFILES
+    PUSHBUTTON      "JarClassToJava",IDC_BTN_JAR2JAVA,206,120,50,14
+    PUSHBUTTON      "APK Certificate",IDC_BTN_GETCER,206,137,50,14
+    EDITTEXT        IDC_EDIT_GETCER,7,137,197,14,ES_AUTOHSCROLL,WS_EX_ACCEPTFILES
+    EDITTEXT        IDC_EDIT_GETXML,7,155,197,14,ES_AUTOHSCROLL,WS_EX_ACCEPTFILES
+    PUSHBUTTON      "GetXML",IDC_BTN_GETXML,207,155,50,14
+END
+
+IDD_DLG_PROGRESS DIALOGEX 0, 0, 170, 46
+STYLE DS_SETFONT | DS_FIXEDSYS | WS_POPUP | WS_BORDER | WS_SYSMENU
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    CTEXT           "waiting...",IDC_TXT_MSG,30,17,108,11
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 1,0,0,0
+ PRODUCTVERSION 1,0,0,1
+ FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x4L
+ FILETYPE 0x1L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "000903a8"
+        BEGIN
+            VALUE "FileDescription", "APKTOOLS"
+            VALUE "FileVersion", "1.0.0.1"
+            VALUE "InternalName", "ApkTools.exe"
+            VALUE "OriginalFilename", "ApkTools.exe"
+            VALUE "ProductName", "apktools"
+            VALUE "ProductVersion", "beta"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x9, 936
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO
+BEGIN
+    IDD_ABOUTBOX, DIALOG
+    BEGIN
+        LEFTMARGIN, 6
+        RIGHTMARGIN, 164
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 115
+    END
+
+    IDD_APKTOOL_DIALOG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 264
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 286
+    END
+
+    IDD_DLG_PROGRESS, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 162
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 39
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE
+BEGIN
+    IDS_ABOUTBOX            "about ApkTools(&A)..."
+END
+
+#endif    // English resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+#define _AFX_NO_SPLITTER_RESOURCES
+#define _AFX_NO_OLE_RESOURCES
+#define _AFX_NO_TRACKER_RESOURCES
+#define _AFX_NO_PROPERTY_RESOURCES
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_CHS)
+LANGUAGE 4, 2
+#pragma code_page(936)
+#include "res\ApkTool.rc2"  // 非 Microsoft Visual C++ 编辑的资源
+#include "l.CHS\afxres.rc"      // 标准组件
+#endif
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+
