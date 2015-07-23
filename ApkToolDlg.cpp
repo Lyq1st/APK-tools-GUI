@@ -923,7 +923,7 @@ void CApkToolDlg::Dex2jar()
 	CString output;
 	CString cmd;
 	CString startTips=L"Start Dex2jar...";
-	output.Format(L"%s%s",GetFileOutPutPath(m_dex2jarFileName),L"_dex2jar.jar");
+	output.Format(L"%s%s",GetFileOutPutPath(m_dex2jarFileName),L"_dextojar.jar");
 	cmd.Format(L"%s \"%s\" -o \"%s\"",
 		m_dex2jar_batPath,
 		m_dex2jarFileName,
