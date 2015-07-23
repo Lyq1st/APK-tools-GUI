@@ -100,7 +100,6 @@ private:
 	CString m_testkey_x509_pemPath;		// testkey.x509.pem path
 	CString m_baksmali_jarPath; // baksmali.jar path 
 	CString m_smali_jarPath;	// smali.jar path 
-	CString m_dex2jar_jarPath;		// dex2jar.jar path
 	CString m_dex2jar_batPath;
 	CString m_jadexe_path;
 	CString m_7zdll_path;

@@ -417,9 +417,8 @@ void CApkToolDlg::Update()
 	m_testkey_x509_pemPath.Format(L"%stestkey.x509.pem", szTempPath);
 	m_baksmali_jarPath.Format(L"%sbaksmali.jar", szTempPath);
 	m_smali_jarPath.Format(L"%ssmali.jar", szTempPath);
-	m_dex2jar_jarPath.Format(L"%sdex2jar.jar", szTempPath);
 	m_jadexe_path.Format(L"%sJad.exe",szTempPath);
-	m_dex2jar_batPath.Format(L"%sdex2jar\\dex2jar.bat", szTempPath);
+	m_dex2jar_batPath.Format(L"%sdex2jar\\d2j-dex2jar.bat", szTempPath);
 	m_7zdll_path.Format(L"%s7z.dll", szTempPath);
 	m_7zexe_path.Format(L"%s7z.exe", szTempPath);
 	m_AXMLPrinter_path.Format(L"%sAXMLPrinter2.jar", szTempPath);
@@ -924,9 +923,11 @@ void CApkToolDlg::Dex2jar()
 	CString output;
 	CString cmd;
 	CString startTips=L"Start Dex2jar...";
-	cmd.Format(L"%s \"%s\"",
+	output.Format(L"%s%s",GetFileOutPutPath(m_dex2jarFileName),L"_dex2jar.jar");
+	cmd.Format(L"%s \"%s\" -o \"%s\"",
 		m_dex2jar_batPath,
-		m_dex2jarFileName
+		m_dex2jarFileName,
+		output
 		);
 	MyCreateProcess(cmd,APK_DEX2JAR,startTips);
 }
@@ -1050,7 +1051,7 @@ void CApkToolDlg::MyCreateProcess(CString cmd,APKTOOL_OPERATION eOperation,CStri
 			if(ReadFile(hRead, buffer, 4095, &bytesRead, NULL)==NULL)
 				break;
 			strLog= CA2W(buffer);
-			if(strLog.Find(L"Done.")>=0){
+			if(strLog.Find(L"Done.")>=0 || strLog.Find(L"->")>=0){
 				bSuccessFlag=true;
 			}
 			int curPos= 0;
