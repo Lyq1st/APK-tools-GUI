@@ -809,7 +809,7 @@ void CApkToolDlg::Decode()
 	CString startTips=L"Start decompiling...";
 	CString output=GetFileOutPutPath(m_decodeFileName);
 	CString cmd;
-	cmd.Format(L"java -jar \"%s\" d \"%s\" \"%s\"", m_apktool_jarPath, m_decodeFileName, output);
+	cmd.Format(L"java -jar \"%s\" d \"%s\" -o \"%s\"", m_apktool_jarPath, m_decodeFileName, output);
 	MyCreateProcess(cmd,APK_DECODE,startTips);
 }
 
@@ -924,7 +924,7 @@ void CApkToolDlg::Dex2jar()
 	CString cmd;
 	CString startTips=L"Start Dex2jar...";
 	output.Format(L"%s%s",GetFileOutPutPath(m_dex2jarFileName),L"_dextojar.jar");
-	cmd.Format(L"%s \"%s\" -o \"%s\"",
+	cmd.Format(L"cmd /c %s \"%s\" -o \"%s\"",
 		m_dex2jar_batPath,
 		m_dex2jarFileName,
 		output
